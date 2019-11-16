@@ -10,9 +10,15 @@ public class GameManager : MonoBehaviour
     public event OnStateChangeHandler OnStateChange;
     public GameState gameState { get; private set; }
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         SetStaticInstance();
+
+    }
+    void Start()
+    {
+       
     }
 
     private void SetStaticInstance()
@@ -20,8 +26,10 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(instance);
         }
         else
+            Destroy(this);
             Debug.Log("There are multiple GameManager instances");
     }
 
