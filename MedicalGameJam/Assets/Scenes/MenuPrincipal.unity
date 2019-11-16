@@ -352,6 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543949003}
   - component: {fileID: 543949004}
+  - component: {fileID: 543949005}
   m_Layer: 5
   m_Name: MenuMain
   m_TagString: Untagged
@@ -394,6 +395,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOverlay: 0
   returnMenu: {fileID: 0}
+--- !u!95 &543949005
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543949002}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f2d07caa783cf24cb641642b3eef55f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &982297198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd83dc8e048ca24595803b933849275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMenuPage: {fileID: 0}
+  startingMenuPage: {fileID: 543949002}
   Fader: {fileID: 4323534004504046220}
 --- !u!1 &2068861236
 GameObject:
