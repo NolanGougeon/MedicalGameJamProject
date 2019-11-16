@@ -52,7 +52,6 @@ public class TapCharacter : MonoBehaviour
 
     IEnumerator FlashSprite()
     {
-        Debug.Log("Start flash");
         bool spriteVisible = true;
 
         while(true)
