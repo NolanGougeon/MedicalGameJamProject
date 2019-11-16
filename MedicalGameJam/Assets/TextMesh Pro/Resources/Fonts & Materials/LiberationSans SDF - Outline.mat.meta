@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6e67b56fdc246dd458c61387937a3bf7
+=======
+guid: bc4b29ed99bc2424fb2a5a1165a47fd4
+>>>>>>> Progres flowchart + ajout introduction
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ff5642c5ebe6c0a479950eada2374fd2
+=======
+guid: 8feb4754fc80ac64781e9488647ee4a1
+>>>>>>> Progres flowchart + ajout introduction
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []
