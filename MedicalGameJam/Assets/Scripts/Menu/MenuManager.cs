@@ -5,26 +5,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
-  public string gameSceneName = "main";
   public static MenuManager instance;
   public GameObject startingMenuPage;
+  public Fader Fader;
   private MenuPage currentlyActiveMenuPage;
-  // Start is called before the first frame update
+
   void Start() {
     SetStaticInstance();
-    currentlyActiveMenuPage = startingMenuPage.GetComponent<MenuPage>();   
+    currentlyActiveMenuPage = startingMenuPage.GetComponent<MenuPage>();
   }
 
-  private void SetStaticInstance () {
+  private void SetStaticInstance() {
     if (instance == null) {
       instance = this;
     }
-    else 
+    else
       Debug.Log("There are multiple MenuManager instances");
   }
 
   // Affiche la page demandée
-  public void SwapUIMenu( MenuPage to ) {
+  public void SwapUIMenu(MenuPage to) {
     if (!to.isOverlay)
       RemoveMenuPage(currentlyActiveMenuPage);
     DisplayMenuPage(to);
@@ -36,10 +36,10 @@ public class MenuManager : MonoBehaviour {
     if (currentlyActiveMenuPage.isOverlay) {
       RemoveMenuPage(currentlyActiveMenuPage);
       currentlyActiveMenuPage = currentlyActiveMenuPage.returnMenu;
-    } 
+    }
     else if (currentlyActiveMenuPage.returnMenu != null) {
       SwapUIMenu(currentlyActiveMenuPage.returnMenu);
-    } 
+    }
   }
 
   private void RemoveMenuPage(MenuPage page) {
@@ -50,8 +50,9 @@ public class MenuManager : MonoBehaviour {
     page.gameObject.SetActive(true);
   }
   // Lance le jeu en changeant de scène
-  public void Play() {
-    //GameManager.instance.LoadGame(gameSceneName); 
+  public void SwapToScene(string gameSceneName) {
+    Fader.FadeOut();
+    GameManager.instance.LoadGame(gameSceneName);
   }
-  
+
 }

@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LoadGame(string gameSceneName){
+      
+    }
+
     public void Quit()
     {
         Application.Quit();
