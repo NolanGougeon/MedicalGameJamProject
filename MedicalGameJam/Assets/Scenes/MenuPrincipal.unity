@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd83dc8e048ca24595803b933849275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMenuPage: {fileID: 0}
+  startingMenuPage: {fileID: 543949002}
   Fader: {fileID: 4323534004504046220}
 --- !u!1 &2068861236
 GameObject:
