@@ -613,6 +613,16 @@ GameObject:
   - component: {fileID: 1692671103}
   - component: {fileID: 1692671102}
   - component: {fileID: 1692671124}
+  - component: {fileID: 1692671134}
+  - component: {fileID: 1692671133}
+  - component: {fileID: 1692671132}
+  - component: {fileID: 1692671131}
+  - component: {fileID: 1692671130}
+  - component: {fileID: 1692671129}
+  - component: {fileID: 1692671128}
+  - component: {fileID: 1692671127}
+  - component: {fileID: 1692671126}
+  - component: {fileID: 1692671125}
   m_Layer: 0
   m_Name: Flowchart1
   m_TagString: Untagged
@@ -637,7 +647,7 @@ MonoBehaviour:
   storyText: "C'est assez emb\xEAtant en effet. Nous allons devoir arr\xEAter le traitement
     d\xE8s aujourd'hui."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 425420884}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -664,7 +674,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: " Ou vous pr\xE9f\xE9rez abandonner tout de ssuite ?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 425420884}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -691,7 +701,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Est-ce que vous pensez pouvoir tenir le coup ?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 425420884}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -719,7 +729,7 @@ MonoBehaviour:
   storyText: "Oui, je comprends. C'est emb\xEAtant mais nous sommes tout proche de
     la fin du processus."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 425420884}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -746,7 +756,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: " Mais vous ne pensez pas que cela vaut tout de m\xEAme le coup ?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 425420884}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -773,7 +783,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "Oui, je comprends c'est compliqu\xE9."
   description: 
-  character: {fileID: 0}
+  character: {fileID: 425420884}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -801,7 +811,7 @@ MonoBehaviour:
   storyText: "Oui, je comprends mais \xE7a n'est pas trop grave. Sur une \xE9chelle
     de 1 \xE0 10, \xE0 quel point cela vous g\xEAne ?"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 425420884}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -866,6 +876,9 @@ MonoBehaviour:
   - {fileID: 1692671105}
   - {fileID: 1692671104}
   - {fileID: 1692671103}
+  - {fileID: 1692671127}
+  - {fileID: 1692671125}
+  - {fileID: 1692671126}
 --- !u!114 &1692671111
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -894,6 +907,7 @@ MonoBehaviour:
   - {fileID: 1692671107}
   - {fileID: 1692671106}
   - {fileID: 1692671124}
+  - {fileID: 1692671134}
 --- !u!114 &1692671112
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1146,9 +1160,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1692671111}
+  - {fileID: 1692671133}
   selectedCommands:
-  - {fileID: 1692671124}
+  - {fileID: 1692671130}
   variables: []
   description: 
   stepPause: 0
@@ -1203,7 +1217,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1692671124
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1214,6 +1228,269 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 70
+  indentLevel: 0
+  text: "Si... Bien-s\xFBr..."
+  description: 
+  targetBlock: {fileID: 1692671133}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1692671125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 80
+  indentLevel: 0
+  text: C'est bon. Je vais tenir.
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1692671126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 79
+  indentLevel: 0
+  text: "Si j'\xE9tais s\xFBr de ne pas avoir pris un placebo..."
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1692671127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 78
+  indentLevel: 0
+  text: "Ca commence \xE0 \xEAtre vraiment compliqu\xE9 pour moi, je pr\xE9f\xE8re
+    abandonner."
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1692671128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 77
+  indentLevel: 0
+  text: "Non, ne vous inqui\xE9tez pas. Je vais tenir."
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1692671129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 76
+  indentLevel: 0
+  text: "Oh oui, s'il vous pla\xEEt !"
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &1692671130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 75
+  indentLevel: 0
+  storyText: "Vous savez que \xE7a aide beaucoup la recherche. Mais si vous voulez
+    on peut all\xE9ger votre programme."
+  description: 
+  character: {fileID: 425420884}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1692671131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 74
+  indentLevel: 0
+  storyText: "Je pense que tous les examents que j'ai \xE0 faire y sont pour beaucoup."
+  description: 
+  character: {fileID: 1178604560}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1692671132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 73
+  indentLevel: 0
+  storyText: "Mais c'est tout de m\xEAme difficile au quotidien."
+  description: 
+  character: {fileID: 1178604560}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1692671133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 629.1886
+    y: 177.84143
+    width: 160.93744
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 72
+  blockName: FatigueMaisContinue
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1692671132}
+  - {fileID: 1692671131}
+  - {fileID: 1692671130}
+  - {fileID: 1692671129}
+  - {fileID: 1692671128}
+--- !u!114 &1692671134
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 71
   indentLevel: 0
   text: Option Text
   description: 
