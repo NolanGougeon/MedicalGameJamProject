@@ -41,17 +41,17 @@ public class AnswerSaving : MonoBehaviour
     }
     public static void LoadData()
     {
-        GameSaving gameSaving = JsonUtility.FromJson<GameSaving>(File.ReadAllText(Application.persistentDataPath + "/saveload.json"));
+       /* AnswerSaving answerSaving = JsonUtility.FromJson<AnswerSaving>(File.ReadAllText(Application.persistentDataPath + "/saveload.json"));
 
-        GameSaving.lSceneName = gameSaving.sceneName;
-        GameSaving.lScore = gameSaving.score;
+        AnswerSaving.lSceneName = answerSaving.sceneName;
+        AnswerSaving.l = answerSaving.score;
 
-        SceneManager.LoadScene(gameSaving.sceneName);
+        SceneManager.LoadScene(answerSaving.sceneName);
 
         //For testing purposes
 
 
-        GameSaving.isLoaded = true;
+        AnswerSaving.isLoaded = true;*/
     }
 
     public static void SaveData(string question, string answer,int index)
@@ -84,6 +84,7 @@ public class AnswerSaving : MonoBehaviour
 
         
         string jsonData = JsonUtility.ToJson(answerSaving, true);
+        File.WriteAllText(jsonSavePath, jsonData);
         Debug.Log(jsonData);
         
        File.WriteAllText(jsonSavePath, jsonData);
