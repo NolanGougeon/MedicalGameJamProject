@@ -127,6 +127,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   lifeSpanStartFlashing: 1
+  spriteFeedback:
+  - {fileID: 6157139850055497411, guid: a029b333c39d6994fb8a178417cc664b, type: 3}
+  - {fileID: 198848886173654397, guid: 466c982437b2ccc44b7148d4b1caecfc, type: 3}
+  - {fileID: 6732652956843486212, guid: 0135ac3121e743148a188e5f709562c0, type: 3}
 --- !u!61 &7749907207591820761
 BoxCollider2D:
   m_ObjectHideFlags: 0

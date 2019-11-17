@@ -23,7 +23,7 @@ public class SoundPlayer : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        instance = null;
+        instance = this;
     }
 
     public void PlayWinSound()
