@@ -8,6 +8,8 @@ public class TapPatientGameManager : MonoBehaviour
     public static TapPatientGameManager Instance { get { return instance; } }
     [SerializeField] TapCharacterGeneratorController generator;
 
+    [SerializeField] GameObject panel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class TapPatientGameManager : MonoBehaviour
     {
         Debug.Log("GameOver");
         generator.generate = false;
+        panel.SetActive(true);
     }
 
 
