@@ -7,27 +7,28 @@ using UnityEngine.SceneManagement;
 public class AnswerSaving : MonoBehaviour
 {
     public static AnswerSaving answerSaving;
-    private static string jsonSavePath = "";
-
+    private static string jsonSavePath = "answers.txt";
+    
     public string sceneName;
     public string question;
     public string answer;
-    public int answerCount;
+    public int[] answerCount;
     public int totalCount;
 
 
     public static string lSceneName;
     public static string lQuestion;
     public static string lAnswer;
-    public static int lAnswerCount;
+    public static int[] lAnswerCount;
     public static int lTotalCount;
 
     public static bool isLoaded = false;
 
-    private void Awake()
+    private void Start()
     {
         if (answerSaving == null)
         {
+            Debug.Log("AS instancied");
            answerSaving = this;
             DontDestroyOnLoad(this);
         }
@@ -51,15 +52,20 @@ public class AnswerSaving : MonoBehaviour
         GameSaving.isLoaded = true;
     }
 
-    public static void SaveData(string question, string answer)
+    public static void SaveData(string question, string answer,int index)
     {
+        Debug.Log("Started Saving");
+        
+        Dictionary<string, string[]> d = new Dictionary<string, string[]>();
+
+        Debug.Log("dictionnary created");
         //References
         Scene scene = SceneManager.GetActiveScene();
-        AnswerSaving answerSaving = new AnswerSaving();
+        
         //Scene Name
         AnswerSaving.lTotalCount += 1;
         answerSaving.sceneName = scene.name;
-
+        Debug.Log(answerSaving.sceneName);
         //Position
 
         AnswerSaving.lSceneName = answerSaving.sceneName;
@@ -70,11 +76,15 @@ public class AnswerSaving : MonoBehaviour
 
         answerSaving.answer = answer;
         AnswerSaving.lAnswer = answerSaving.answer;
-
-        answerSaving.answerCount+=1;
-        AnswerSaving.lAnswerCount = answerSaving.answerCount;
+        answerSaving.answerCount[index-1]+=1;
+        AnswerSaving.lAnswerCount[index] = answerSaving.answerCount[index-1];
         answerSaving.totalCount = AnswerSaving.lTotalCount;
-        string jsonData = JsonUtility.ToJson(answerSaving, true);
+
+        d.Add(question, new[]{ answer,((answerSaving.answerCount[index-1]  *100)/AnswerSaving.lTotalCount)+""});
+
+        Debug.Log("dictionnary created "+d.Count);
+        string jsonData = JsonUtility.ToJson(d, true);
+        Debug.Log(jsonData);
         File.WriteAllText(jsonSavePath, jsonData);
 
     }
