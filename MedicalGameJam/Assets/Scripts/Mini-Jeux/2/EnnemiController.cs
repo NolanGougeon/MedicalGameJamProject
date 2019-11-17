@@ -21,19 +21,13 @@ public class EnnemiController : MonoBehaviour
     void Start()
     {
         m_rigibody.inertia = 1;
-       m_rigibody.velocity = Vector2.right * 5;
+       m_rigibody.velocity = Vector2.right * 10;
     }
 
     // Update is called once per frame
     void Update()
     { 
-        
-        
-           
-        if (Math.Abs(m_rigibody.velocity.x)>10 || Math.Abs(m_rigibody.velocity.y)>10)
-        {
-            
-        }
+       
         
         if (CheckHP())
         {
