@@ -21,7 +21,7 @@ public class EnnemiController : MonoBehaviour
     void Start()
     {
         m_rigibody.inertia = 1;
-       m_rigibody.velocity = Vector2.right * 10;
+       m_rigibody.velocity = Vector2.right * 5;
     }
 
     // Update is called once per frame

@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     
     Transform m_Transform;
     Rigidbody m_Rigidbody;
-   
-   
+
+    Animation anim;
 
     bool lookingRight = true;
 
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         m_Transform = transform;
         m_Rigidbody = GetComponent<Rigidbody>();
-      
+        anim = GetComponent<Animation>();
 
         timeNextThrow = Time.time;
     }
@@ -56,9 +56,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             mLUsed += 1;
+            GetComponent<Animator>().SetTrigger("Fire");
             FireProjectile();
             UpdateTextMesh();
-            
         }
     }
 
