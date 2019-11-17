@@ -13,9 +13,18 @@ public class TapPatient : TapCharacter
         base.Update();
     }*/
 
+    public override void Tap()
+    {
+        SoundPlayer.Instance.PlayWinSound();
+        Instantiate(spriteFeedback[0], transform.position, Quaternion.identity);
+        base.Tap();
+    }
+
     protected override void Disappear()
     {
         CounterController.score -= malus;
+        SoundPlayer.Instance.PlayLoseSound();
+        Instantiate(spriteFeedback[2], transform.position, Quaternion.identity);
         base.Disappear();
     }
 }
