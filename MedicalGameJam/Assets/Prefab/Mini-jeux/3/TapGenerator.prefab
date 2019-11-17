@@ -43,13 +43,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb87984140d6a8479f36fbe347a18a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientPrefab: {fileID: 7749907207591820767, guid: 25ebe32679c3580418f253b9fcb12129,
-    type: 3}
-  medecinPrefab: {fileID: 2521535331951529833, guid: d590133c8e152ac45bfdb0f4b8829315,
-    type: 3}
+  patientPrefab:
+  - {fileID: 7749907207591820767, guid: 25ebe32679c3580418f253b9fcb12129, type: 3}
+  - {fileID: 7749907207591820767, guid: 3dfb6674504865140bbb0b3655368334, type: 3}
+  - {fileID: 7749907207591820767, guid: ddbbd88011ed5544fbb27d04aea6e7fa, type: 3}
+  - {fileID: 7749907207591820767, guid: e6c95fb64ee477b42a0f842123c1db5a, type: 3}
+  - {fileID: 7749907207591820767, guid: 4e92487a258f83841aa6edb291b82949, type: 3}
+  medecinPrefab:
+  - {fileID: 2521535331951529833, guid: d590133c8e152ac45bfdb0f4b8829315, type: 3}
+  - {fileID: 2521535331951529833, guid: 261aac4265c73d745ac4f80472ab98f7, type: 3}
+  - {fileID: 2521535331951529833, guid: 8eb141b934bf5c0448d61fc3a2813d8a, type: 3}
   boundX: {x: -8, y: 8}
   boundY: {x: -4, y: 4}
   appearingFrequency: 2
   minFrequency: 1
-  medecinApparitionChance: 0.15
+  medecinApparitionChance: 0.2
   generate: 1

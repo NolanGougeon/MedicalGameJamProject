@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TapCharacterGeneratorController : MonoBehaviour
 {
-    [SerializeField] GameObject patientPrefab;
-    [SerializeField] GameObject medecinPrefab;
+    [SerializeField] GameObject[] patientPrefab;
+    [SerializeField] GameObject[] medecinPrefab;
 
     [SerializeField] Vector2 boundX, boundY;
 
@@ -45,11 +45,11 @@ public class TapCharacterGeneratorController : MonoBehaviour
         Vector2 appearingPos = new Vector2(Random.Range(boundX.x, boundX.y), Random.Range(boundY.x, boundY.y));
         if(Random.Range(0f,1f)<medecinApparitionChance)
         {
-            Instantiate(medecinPrefab, appearingPos, Quaternion.identity);
+            Instantiate(medecinPrefab[Random.Range(0, medecinPrefab.Length)], appearingPos, Quaternion.identity);
         }
         else
         {
-            Instantiate(patientPrefab, appearingPos, Quaternion.identity);
+            Instantiate(patientPrefab[Random.Range(0, patientPrefab.Length)], appearingPos, Quaternion.identity);
         }
     }
 }
