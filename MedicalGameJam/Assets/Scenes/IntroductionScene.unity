@@ -968,7 +968,6 @@ GameObject:
   - component: {fileID: 1692671116}
   - component: {fileID: 1692671115}
   - component: {fileID: 1692671128}
-  - component: {fileID: 1692671129}
   - component: {fileID: 1692671132}
   - component: {fileID: 1692671125}
   - component: {fileID: 1692671139}
@@ -980,6 +979,7 @@ GameObject:
   - component: {fileID: 1692671141}
   - component: {fileID: 1692671142}
   - component: {fileID: 1692671148}
+  - component: {fileID: 1692671107}
   m_Layer: 0
   m_Name: Flowchart1
   m_TagString: Untagged
@@ -1125,6 +1125,25 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1692671107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 0
+  duration: 3
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
 --- !u!114 &1692671115
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1222,7 +1241,7 @@ MonoBehaviour:
   - {fileID: 1692671135}
   - {fileID: 1692671116}
   - {fileID: 1692671115}
-  - {fileID: 1692671129}
+  - {fileID: 1692671107}
   - {fileID: 1692671148}
 --- !u!114 &1692671119
 MonoBehaviour:
@@ -1303,9 +1322,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1692671120}
-  selectedCommands:
-  - {fileID: 1692671106}
+  - {fileID: 1692671118}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1369,25 +1387,6 @@ MonoBehaviour:
     booleanVal: 1
   affectChildren: 1
   visibleOLD: 0
---- !u!114 &1692671129
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692671101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 25
-  indentLevel: 0
-  duration: 3
-  targetAlpha: 1
-  waitUntilFinished: 1
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTexture: {fileID: 0}
 --- !u!114 &1692671132
 MonoBehaviour:
   m_ObjectHideFlags: 2
