@@ -18,13 +18,13 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
             mp = Camera.main.ScreenToWorldPoint(touch.position);
 
         }
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0))
             mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * 10);
     }

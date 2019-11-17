@@ -912,6 +912,7 @@ GameObject:
   - component: {fileID: 1692671286}
   - component: {fileID: 1692671285}
   - component: {fileID: 1692671290}
+  - component: {fileID: 1692671291}
   m_Layer: 0
   m_Name: Flowchart1
   m_TagString: Untagged
@@ -1125,14 +1126,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 221.06383
+    x: 222.62633
     y: 358.40945
-    width: 167.18742
+    width: 146.87494
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 62
-  blockName: InsuffisanceCardiaque
+  blockName: "Neutrop\xE9nie grave"
   description: 
   eventHandler: {fileID: 0}
   commandList:
@@ -1316,7 +1317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 56
   indentLevel: 0
-  text: Je souffre d'insuffisance cardiaque !
+  text: "Mon m\xE9decin m\u2019a dit de venir vous voire en urgence car je fais de
+    la neutrop\xE9nie."
   description: 
   targetBlock: {fileID: 1692671109}
   hideIfVisited: 0
@@ -1470,7 +1472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 478.1866, y: -103.45028}
+  scrollPos: {x: 179.7493, y: -181.5752}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 355
@@ -1481,8 +1483,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1692671196}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -3667,8 +3668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 148
   indentLevel: 0
-  storyText: "L\xE9galement, devant ce type de sympt\xF4mes, nous ne somme pas cens\xE9s
-    continuer le traitement."
+  storyText: Je voulais juste que vous soyez au courant des risques encouru.
   description: 
   character: {fileID: 425420884}
   portrait: {fileID: 0}
@@ -3723,7 +3723,7 @@ MonoBehaviour:
   itemId: 146
   indentLevel: 0
   storyText: " Merci d\u2019avoir bien voulu particip\xE9 \xE0 l\u2019\xE9tude, j\u2019esp\xE8re
-    que votre insuffisance cardiaque va se r\xE9sorber rapidemen"
+    que votre insuffisance cardiaque va se r\xE9sorber rapidement"
   description: 
   character: {fileID: 425420884}
   portrait: {fileID: 0}
@@ -3779,17 +3779,18 @@ MonoBehaviour:
     serializedVersion: 2
     x: 515.93243
     y: 408.98474
-    width: 149.99994
+    width: 160.93744
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 144
-  blockName: CardiaqueContinue
+  blockName: NeutropenieContinue
   description: 
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1692671213}
   - {fileID: 1692671199}
+  - {fileID: 1692671291}
   - {fileID: 1692671266}
   - {fileID: 1692671198}
   - {fileID: 1692671197}
@@ -3809,12 +3810,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 508.6598
     y: 312.62125
-    width: 131.24994
+    width: 142.18744
     height: 40
   tint: {r: 1, g: 0, b: 0, a: 1}
   useCustomTint: 1
   itemId: 143
-  blockName: CardiaqueArret
+  blockName: NeutropenieArret
   description: 
   eventHandler: {fileID: 0}
   commandList:
@@ -5883,7 +5884,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &1692671283
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5910,7 +5911,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1692671284
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5938,7 +5939,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1692671285
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5965,7 +5966,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1692671286
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5993,7 +5994,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1692671287
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6021,7 +6022,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1692671288
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6048,7 +6049,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1692671289
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6076,7 +6077,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1692671290
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6090,6 +6091,34 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "mais nous allons aussi comparer vos donn\xE9es pour comprendre d\u2019o\xF9
     peut venir le probl\xE8me."
+  description: 
+  character: {fileID: 425420884}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1692671291
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692671101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 239
+  indentLevel: 0
+  storyText: "Mais si vous le souhaitez v\xE9ritablement, nous mettrons en place un
+    suivi particulier."
   description: 
   character: {fileID: 425420884}
   portrait: {fileID: 0}

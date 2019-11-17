@@ -15,6 +15,8 @@ public class TapCharacter : MonoBehaviour
 
     bool flashing = false;
 
+    [SerializeField] protected GameObject[] spriteFeedback;
+
     private void Awake()
     {
         renderer = GetComponentInChildren<SpriteRenderer>();
@@ -44,7 +46,7 @@ public class TapCharacter : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Tap()
+    public virtual void Tap()
     {
         CounterController.score += value;
         Destroy(gameObject);

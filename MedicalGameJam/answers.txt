@@ -1,0 +1,7 @@
+{
+    "sceneName": "IntroductionScene",
+    "question": "Quel patient ?",
+    "answer": "Patient 2",
+    "answerCount": 1,
+    "totalCount": 1
+}

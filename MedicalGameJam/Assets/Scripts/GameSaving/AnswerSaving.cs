@@ -12,14 +12,14 @@ public class AnswerSaving : MonoBehaviour
     public string sceneName;
     public string question;
     public string answer;
-    public int[] answerCount;
+    public int answerCount;
     public int totalCount;
 
 
     public static string lSceneName;
     public static string lQuestion;
     public static string lAnswer;
-    public static int[] lAnswerCount;
+    public static int lAnswerCount;
     public static int lTotalCount;
 
     public static bool isLoaded = false;
@@ -36,6 +36,8 @@ public class AnswerSaving : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
     }
     public static void LoadData()
     {
@@ -56,9 +58,7 @@ public class AnswerSaving : MonoBehaviour
     {
         Debug.Log("Started Saving");
         
-        Dictionary<string, string[]> d = new Dictionary<string, string[]>();
-
-        Debug.Log("dictionnary created");
+       
         //References
         Scene scene = SceneManager.GetActiveScene();
         
@@ -76,16 +76,17 @@ public class AnswerSaving : MonoBehaviour
 
         answerSaving.answer = answer;
         AnswerSaving.lAnswer = answerSaving.answer;
-        answerSaving.answerCount[index-1]+=1;
-        AnswerSaving.lAnswerCount[index] = answerSaving.answerCount[index-1];
+        answerSaving.answerCount+=1;
+        AnswerSaving.lAnswerCount = answerSaving.answerCount;
         answerSaving.totalCount = AnswerSaving.lTotalCount;
+        
+        
 
-        d.Add(question, new[]{ answer,((answerSaving.answerCount[index-1]  *100)/AnswerSaving.lTotalCount)+""});
-
-        Debug.Log("dictionnary created "+d.Count);
-        string jsonData = JsonUtility.ToJson(d, true);
+        
+        string jsonData = JsonUtility.ToJson(answerSaving, true);
         Debug.Log(jsonData);
-        File.WriteAllText(jsonSavePath, jsonData);
+        
+       File.WriteAllText(jsonSavePath, jsonData);
 
     }
 }

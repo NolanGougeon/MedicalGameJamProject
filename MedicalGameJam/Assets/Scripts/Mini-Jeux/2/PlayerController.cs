@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] TextMeshProUGUI vaccinUsed;
     [SerializeField] float fireRate=.25f;
     private float timeNextThrow;
-    float mLUsed;
+     public float mLUsed;
     [SerializeField] float throwForce = 1000.0f;
     
 
@@ -64,8 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateTextMesh()
     {
-        Debug.Log(canva.isActiveAndEnabled);
-        Debug.Log(canva.GetComponentInChildren<TextMeshPro>());
+        
         vaccinUsed.SetText(mLUsed + " mL used");
        //canva.GetComponent<TextMeshPro>().GetComponent<TextMeshProUGUI>().SetText();
 

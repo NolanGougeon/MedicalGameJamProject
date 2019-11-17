@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 878053800}
   - component: {fileID: 878053824}
   - component: {fileID: 878053823}
+  - component: {fileID: 878053825}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -841,6 +842,7 @@ MonoBehaviour:
   - {fileID: 878053804}
   - {fileID: 878053824}
   - {fileID: 878053823}
+  - {fileID: 878053825}
 --- !u!114 &878053821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,10 +867,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 878053820}
-  selectedCommands:
-  - {fileID: 878053823}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -896,7 +896,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &878053823
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -910,7 +910,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &878053824
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -927,6 +927,34 @@ MonoBehaviour:
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
+--- !u!114 &878053825
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878053799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  description: 
+  targetObject: {fileID: 1670497855}
+  targetComponentAssemblyName: LoadSceneManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: LoadSceneManager
+  targetMethod: LoadNextScene
+  targetMethodText: 'LoadNextScene (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1001 &884894722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1399,6 +1427,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3684931130413180760, guid: 27252e9713521324a9eb319a6046abe7,
     type: 3}
   m_PrefabInstance: {fileID: 1011990699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1670497855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218129347084434290, guid: 893321dd706f31f4f9b9d6b06fffa43d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1095485002}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733775315
 GameObject:

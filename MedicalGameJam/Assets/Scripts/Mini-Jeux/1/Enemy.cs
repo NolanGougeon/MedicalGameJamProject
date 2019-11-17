@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     private bool isPlayerOnSight;
     public GameObject player;
+    Vector3 targetScale;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +17,13 @@ public class Enemy : MonoBehaviour
         m_rigibody = GetComponent<Rigidbody2D>();
         timer = new Timer(2f, randomMove);
         timer.Play();
+        targetScale = transform.localScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * 10);
     }
 
     public void randomMove()
@@ -44,8 +47,7 @@ public class Enemy : MonoBehaviour
             float scale_y = collision.gameObject.transform.localScale.y;
             if (scale_x < transform.localScale.x && scale_y < transform.localScale.y)
             {
-                transform.localScale += new Vector3(scale_x, scale_y, 0);
-                //GetComponent<CircleCollider2D>
+                targetScale += new Vector3(scale_x, scale_y, 0);
 
                 if (collision.gameObject.tag == "Enemy")
                 {
