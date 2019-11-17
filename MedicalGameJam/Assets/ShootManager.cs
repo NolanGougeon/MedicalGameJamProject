@@ -32,7 +32,7 @@ public class ShootManager : MonoBehaviour
         {
             Victory();
         }
-        else if(value > v + 3 || Time.realtimeSinceStartup==90)
+        else if(value > v*2 + 3 || Time.realtimeSinceStartup==90)
         {
             Defeat();
         }
@@ -44,7 +44,7 @@ public class ShootManager : MonoBehaviour
 
     }
      private void Defeat()
-    {
+     {
         LoadSceneManager.Instance.ReloadScene();
-    }
+     }
 }

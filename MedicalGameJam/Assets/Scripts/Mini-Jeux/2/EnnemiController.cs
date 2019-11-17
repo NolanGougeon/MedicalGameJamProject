@@ -27,13 +27,7 @@ public class EnnemiController : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        
-        
-           
-        if (Math.Abs(m_rigibody.velocity.x)>10 || Math.Abs(m_rigibody.velocity.y)>10)
-        {
-            
-        }
+       
         
         if (CheckHP())
         {
