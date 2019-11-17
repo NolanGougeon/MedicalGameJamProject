@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
             m_rigibody.MovePosition(Vector2.MoveTowards(m_rigibody.position, mp, speed * Time.fixedDeltaTime));
         }
 
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Food")
