@@ -14,7 +14,7 @@ public class EnnemiController : MonoBehaviour
     {
         m_rigibody = this.GetComponent<Rigidbody2D>();
 
-        this.transform.position = new Vector3(UnityEngine.Random.Range(-11, 12), UnityEngine.Random.Range(-7, 7), 0);
+        this.transform.position = new Vector3(UnityEngine.Random.Range(-3, 3), UnityEngine.Random.Range(-1, 2), 0);
     }
 
     // Start is called before the first frame update
