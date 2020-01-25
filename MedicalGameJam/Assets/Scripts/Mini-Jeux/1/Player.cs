@@ -9,9 +9,14 @@ public class Player : MonoBehaviour
     Vector3 targetScale;
 
     Vector2 mp;
+
+    private AudioSource audioSource;
+    [SerializeField] AudioClip eatSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         m_rigibody = GetComponent<Rigidbody2D>();
         targetScale = transform.localScale;
     }
@@ -49,7 +54,7 @@ public class Player : MonoBehaviour
         {
             float scale_x = collision.gameObject.transform.localScale.x;
             float scale_y = collision.gameObject.transform.localScale.y;
-            if (scale_x < transform.localScale.x && scale_y < transform.localScale.y)
+            if (scale_x <= transform.localScale.x && scale_y <= transform.localScale.y)
             {
                 targetScale += new Vector3(scale_x, scale_y, 0);
 
@@ -60,6 +65,11 @@ public class Player : MonoBehaviour
                 }
                 Destroy(collision.gameObject);
             }
+
+            audioSource.clip = eatSound;
+            audioSource.pitch = Random.Range(0.9f, 1.1f);
+            audioSource.Play();
         }
+
     }
 }

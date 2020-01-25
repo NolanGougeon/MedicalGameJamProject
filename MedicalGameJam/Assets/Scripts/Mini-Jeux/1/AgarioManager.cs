@@ -18,9 +18,15 @@ public class AgarioManager : MonoBehaviour
 
     public bool isWin;
     public bool isLose;
+
+    private AudioSource audioSource;
+    [SerializeField] AudioClip winSound, loseSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 1.0f;
         listEnemy = new List<GameObject>();
         listFood = new List<GameObject>();
         SetStaticInstance();
@@ -46,12 +52,15 @@ public class AgarioManager : MonoBehaviour
 
     public  void Victory()
     {
+        audioSource.volume = .3f;
+        PlaySound(winSound);
         Debug.Log("Victoire");
         victoryButton.SetActive(true);
     }
 
     public void Defeat()
     {
+        PlaySound(loseSound);
         Debug.Log("Défaite");
         retryButton.SetActive(true);
     }
@@ -110,5 +119,15 @@ public class AgarioManager : MonoBehaviour
         {
             listFood.Add(InstanciateObject(pf_food, camWidth, camHeight));
         }
+
+        isLose = false;
+        isWin = false;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.Play();
     }
 }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Food
   - Enemy
+  - Ennemi
+  - Bound
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -15,10 +18,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Ennemies
+  - Player
+  - Bounds
+  - Projectiles
   - 
   - 
   - 
@@ -42,4 +45,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1329574817
+    locked: 0
+  - name: Ennemies
+    uniqueID: 1018439215
+    locked: 0
+  - name: Projectile
+    uniqueID: 2259822639
+    locked: 0
+  - name: Player
+    uniqueID: 1405256813
+    locked: 0
+  - name: Particles
+    uniqueID: 1882440027
+    locked: 0
+  - name: InGameUI
+    uniqueID: 337839015
     locked: 0

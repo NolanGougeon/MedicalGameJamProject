@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Enemy : MonoBehaviour
 {
     Rigidbody2D m_rigibody;
@@ -11,9 +12,13 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     Vector3 targetScale;
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip eatSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         m_rigibody = GetComponent<Rigidbody2D>();
         timer = new Timer(2f, randomMove);
         timer.Play();
@@ -56,6 +61,10 @@ public class Enemy : MonoBehaviour
                 }
                 Destroy(collision.gameObject);
             }
+
+            audioSource.clip = eatSound;
+            audioSource.pitch = Random.Range(0.9f, 1.1f);
+            audioSource.Play();
         }
     }
 }

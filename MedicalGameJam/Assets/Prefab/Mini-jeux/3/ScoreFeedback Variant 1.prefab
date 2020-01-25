@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 198848886173654397, guid: 466c982437b2ccc44b7148d4b1caecfc,
         type: 3}
       propertyPath: m_Name
-      value: ScoreFeedback
+      value: ScoreFeedback Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170260569600662859, guid: 466c982437b2ccc44b7148d4b1caecfc,
         type: 3}

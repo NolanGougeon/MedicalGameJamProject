@@ -778,7 +778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  musicClip: {fileID: 8300000, guid: f3c866bbc4639e7409c30c71736d84a6, type: 3}
+  musicClip: {fileID: 8300000, guid: 0fc3719dcc1fae9489fcbaa2e381cffe, type: 3}
   atTime: 0
   loop: 1
   fadeDuration: 1
@@ -811,7 +811,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 68
-    y: 70
+    y: 71
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -869,7 +869,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 878053820}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 878053818}
   variables: []
   description: 
   stepPause: 0
@@ -1682,6 +1683,26 @@ PrefabInstance:
     - target: {fileID: 1958374984650612033, guid: 775584a112954834fbaafe22003375ed,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958374984650612033, guid: 775584a112954834fbaafe22003375ed,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958374984650612033, guid: 775584a112954834fbaafe22003375ed,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958374984650612033, guid: 775584a112954834fbaafe22003375ed,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958374984650612033, guid: 775584a112954834fbaafe22003375ed,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1958374985768725556, guid: 775584a112954834fbaafe22003375ed,
